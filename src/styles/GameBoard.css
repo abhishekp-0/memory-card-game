@@ -1,0 +1,58 @@
+/* src/styles/GameBoard.css */
+
+/* The container for all the cards */
+.game-board {
+  display: flex; /* Establishes a flex container */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  justify-content: center; /* Centers the cards horizontally */
+  gap: 1.5rem; /* Adds space between the cards */
+  padding: 1rem;
+  max-width: 1000px; /* Or whatever max-width you prefer */
+  margin: auto; /* Centers the board itself */
+}
+
+/* Individual card styling */
+.card {
+  /* Sizing - flex-basis is like a "default size" in a flex container */
+  flex-basis: 150px; 
+  
+  /* Appearance */
+  background-color: #213547;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+  /* Content Layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Interaction */
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect for the card */
+.card:hover {
+  transform: scale(1.05); /* Makes the card slightly larger on hover */
+  border-color: #61dafbaa; /* Adds a highlight color */
+}
+
+/* Styling for the image inside the card */
+.card img {
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
+  border-radius: 10px; /* Ensures the image fits the card's curves */
+  pointer-events: none; /* Prevents image from interfering with card's click event */
+}
+
+/* Styling for the name text inside the card */
+.card p {
+  margin: 0;
+  padding: 0.5rem 1rem 1rem;
+  font-weight: 500;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  pointer-events: none; /* Prevents text from interfering with card's click event */
+}

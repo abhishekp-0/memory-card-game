@@ -1,0 +1,71 @@
+/* src/styles/ScoreBoard.css */
+
+.score-board {
+  /* Layout */
+  display: flex;
+  justify-content: space-between; /* Pushes children to the edges and center */
+  align-items: center; /* Vertically aligns all children */
+  
+  /* Sizing & Spacing */
+  width: 100%;
+  max-width: 800px; /* Or a width that suits your game board */
+  padding: 1rem 2rem;
+  margin-bottom: 2rem; /* Adds space between the scoreboard and gameboard */
+
+  /* Appearance */
+  background-color: #1a1a1a; /* A slightly lighter shade than the body from index.css */
+  border: 1px solid #646cff; /* Uses the accent color from your theme */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  /* Font */
+  color: rgba(255, 255, 255, 0.87); /* Ensures text color matches the theme */
+}
+
+/* Style the main title */
+.score-board h1 {
+  /* Overriding default h1 styles from index.css to fit better in a header */
+  font-size: 2.2em; 
+  line-height: 1;
+  margin: 0; /* Removes default margins */
+  color: #61dafbaa; /* Using the React logo color for a nice touch */
+}
+
+/* Style the score text containers */
+.score-left, .score-right {
+  flex: 1; /* Allows them to grow and take up available space */
+}
+
+.score-left {
+  text-align: left;
+}
+
+.score-right {
+  text-align: right;
+}
+
+/* Style the actual score paragraphs */
+.score-board p {
+  margin: 0; /* Removes default paragraph margins */
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+
+/* --- Responsive Design for smaller screens --- */
+@media (max-width: 600px) {
+  .score-board {
+    flex-direction: column; /* Stacks items vertically */
+    gap: 1rem; /* Adds space between the stacked items */
+    padding: 1rem;
+  }
+
+  .score-board h1 {
+    font-size: 1.8em;
+  }
+  
+  .score-left, .score-right {
+    text-align: center; /* Center text when stacked */
+    width: 100%;
+  }
+}

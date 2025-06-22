@@ -1,0 +1,28 @@
+/* src/App.css */
+
+#root {
+  /* Ensure the root element takes full width */
+  width: 100%; 
+  display: flex;
+  flex-direction: column; /* Stack ScoreBoard and GameBoard vertically */
+  align-items: center; /* Center content horizontally */
+  justify-content: space-between;
+  min-height: 100vh; /* Ensure it takes at least the full viewport height */
+  padding: 20px; /* Add some padding around the entire app */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+/* You might want to add some spacing between the scoreboard and game board */
+.score-board {
+  margin-bottom: 2rem; /* Already present in ScoreBoard.css, but good to note its effect */
+}
+
+/* Basic styling for the main application container if needed */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Ensure App component takes full width */
+  max-width: 1200px; /* Optional: Set a max-width for the entire app content */
+  margin: 0 auto; /* Center the app content if max-width is applied */
+}
